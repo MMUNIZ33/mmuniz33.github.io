@@ -1,49 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Matheus Muniz</title>
-    <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap" rel="stylesheet">
-<!--Dev Icons Fonts-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
-<!--CSS do Projeto-->
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio | Matheus Muniz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
+  <link rel="stylesheet" href="css/portfolio.css">
 </head>
 <body>
-    <main id="container">
-        <aside id="bio-container">
-            <h2>Matheus Muniz</h2>
-            <img id="bio-image" src="img/80501285.jpg" alt="Matheus Muniz foto">
-            <p>Olá, meu nome é Matheus Muniz e sou estudante de <span id="highlight">programação: C#</span></p>
-            <p id="welcome-text">Seja bem-vindo</p>
-            <ul id="social-container">
-                <li><a href="#" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                <li><a href="#" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                <li><a href="#" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>  
-            </ul>
-            <div id="email-container"></div>
-            <ion-icon name="mail-outline"></ion-icon><a href="mailto:matthews.muniz33@gmail.com">matthews.muniz33@gmail.com</a>
-        </aside>
-        <section id="about-container">
-            <h1 id="name">Matheus Muniz</h1>
-            <p id="title"><span class="highlight">Programador</span></p>
-            <p class="description">Sou um estudante de programação, estou aprimorando minhas habilidades na linguagem C#. Estudo todos os dias para me tornar cada vez melhor e escrever códigos de qualidade.</p>
-            <a href="https://github.com/MMUNIZ33" id="btn-projects"><ion-icon name="share-social-outline"> </ion-icon><span>Ver Projetos</span> </a>
-            <h2 id="skills-section-title">Minhas Skills</h2>
-            <p class="description">Conheça as tecnologias que domino:</p>
-            <div id="skills-container">
-                <div class="skills-box">
-                    <p class="skills-title">Back-end</p>
-                    <i class="devicon-csharp-plain-wordmark"></i>
-                </div>
-            </div>
-        </section>
-    </main>
-    <!--Ion Icons-->
-    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+  <header class="hero">
+    <div class="hero-content fade-section">
+      <img src="img/80501285.jpg" alt="Foto de Matheus" class="profile">
+      <h1>Matheus Muniz</h1>
+      <p class="intro">Desenvolvedor C# e ASP.NET</p>
+    </div>
+  </header>
+  <main>
+    <section id="sobre" class="fade-section">
+      <h2>Sobre Mim</h2>
+      <p>Sou desenvolvedor focado em tecnologias Microsoft, trabalhando com C#, ASP.NET e MySQL. Tenho experiência em criar APIs REST, testar com Postman e colaborar utilizando Git. Sou comunicativo e gosto de trabalhar em equipe.</p>
+    </section>
+    <section id="projetos" class="fade-section">
+      <h2>Projetos em Destaque</h2>
+      <div class="project-list">
+        <div class="project">
+          <h3>Locador</h3>
+          <p>Sistema de locação de veículos com gerenciamento de contratos.</p>
+          <p class="tech">C#, ASP.NET, MySQL</p>
+          <a href="https://github.com/MMUNIZ33/locador" target="_blank">Ver repositório</a>
+        </div>
+        <div class="project">
+          <h3>Gerenciador de Tarefas</h3>
+          <p>Aplicação web para controle de tarefas e produtividade.</p>
+          <p class="tech">C#, ASP.NET MVC</p>
+          <a href="https://github.com/MMUNIZ33/task-manager" target="_blank">Ver repositório</a>
+        </div>
+        <div class="project">
+          <h3>API Catálogo de Livros</h3>
+          <p>API REST para cadastro e consulta de livros.</p>
+          <p class="tech">C#, .NET, Entity Framework</p>
+          <a href="https://github.com/MMUNIZ33/book-api" target="_blank">Ver repositório</a>
+        </div>
+      </div>
+    </section>
+    <section id="competencias" class="fade-section">
+      <h2>Competências Técnicas</h2>
+      <ul class="skills">
+        <li><i class="devicon-csharp-plain colored"></i><span>C#</span></li>
+        <li><i class="devicon-dotnetcore-plain colored"></i><span>.NET</span></li>
+        <li><i class="devicon-mysql-plain colored"></i><span>MySQL</span></li>
+        <li><i class="devicon-aspnet-plain colored"></i><span>ASP.NET</span></li>
+        <li><i class="devicon-postman-plain colored"></i><span>Postman</span></li>
+        <li><i class="devicon-git-plain colored"></i><span>Git</span></li>
+      </ul>
+    </section>
+    <section id="contato" class="fade-section">
+      <h2>Contato</h2>
+      <p>Email: <a href="mailto:matthews.muniz33@gmail.com">matthews.muniz33@gmail.com</a></p>
+      <p>Telefone: <a href="tel:+5511999999999">(11) 99999-9999</a></p>
+      <ul class="social">
+        <li><a href="https://github.com/MMUNIZ33" target="_blank"><i class="devicon-github-original"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/matheus-muniz/" target="_blank"><i class="devicon-linkedin-plain"></i></a></li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="current-year"></span> Matheus Muniz. Todos os direitos reservados.</p>
+  </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>
