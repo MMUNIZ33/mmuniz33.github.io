@@ -1,78 +1,193 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio | Matheus Muniz</title>
-  <meta name="description" content="Portfólio profissional de Matheus Muniz, desenvolvedor especializado em C#, ASP.NET e MySQL">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/portfolio.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Matheus Muniz</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* bg-gray-900 */
+            color: #d1d5db; /* text-gray-300 */
+        }
+        .card {
+            background-color: #1f2937; /* bg-gray-800 */
+            border: 1px solid #374151; /* border-gray-700 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        }
+        .tag {
+            background-color: #374151; /* bg-gray-700 */
+            color: #93c5fd; /* text-blue-300 */
+            font-weight: 500;
+        }
+        h1, h2, h3 {
+            color: #ffffff;
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2;
+            color: #93c5fd; /* text-blue-300 */
+        }
+    </style>
 </head>
-<body>
-  <header class="hero">
-    <div class="hero-content fade-section">
-      <img src="img/80501285.jpg" alt="Foto de Matheus" class="profile">
-      <h1>Matheus Muniz</h1>
-      <p class="intro">Desenvolvedor .NET</p>
-      <p class="intro-small">Sempre buscando aprender e colaborar em projetos utilizando meus conhecimentos em .NET.</p>
+<body class="antialiased">
+
+    <!-- Main Container -->
+    <div class="container mx-auto max-w-5xl p-4 sm:p-6 lg:p-8">
+
+        <!-- Header Section -->
+        <header class="flex flex-col md:flex-row items-start md:items-center justify-between mb-12">
+            <div>
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Matheus Muniz</h1>
+                <h2 class="text-2xl text-blue-400 font-medium mt-1">Desenvolvedor .NET</h2>
+                <p class="mt-4 max-w-2xl text-gray-400">
+                    Tenho um grande desejo de usar o que aprendi para ajudar em projetos e aprender com meus colegas. Acredito que terei boas chances de crescer profissionalmente.
+                </p>
+            </div>
+            <div class="flex space-x-4 mt-6 md:mt-0">
+                <a href="https://github.com/MMUNIZ33" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="GitHub">
+                    <i data-lucide="github" class="w-7 h-7"></i>
+                </a>
+                <a href="https://linkedin.com/in/mattheus-muniz" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+                    <i data-lucide="linkedin" class="w-7 h-7"></i>
+                </a>
+                <a href="mailto:mmuniz.dev@gmail.com" class="text-gray-400 hover:text-white transition-colors" aria-label="Email">
+                    <i data-lucide="mail" class="w-7 h-7"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <main class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- Left Column -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Experiências Section -->
+                <section id="experiencias">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center">
+                        <i data-lucide="briefcase" class="mr-3 icon"></i>
+                        Experiências
+                    </h3>
+                    <div class="space-y-6">
+                        <!-- BLOMAQ Experience -->
+                        <div class="card rounded-lg p-6">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="text-xl font-semibold text-white">Desenvolvedor de Software</h4>
+                                    <p class="text-blue-400">BLOMAQ - LOCAÇÃO DE EQUIPAMENTOS E IMOVEIS LTDA</p>
+                                </div>
+                                <span class="text-sm text-gray-400">AGO 2021 - Atualmente</span>
+                            </div>
+                            <p class="mt-4 text-gray-300">
+                                Atuo desde a concepção e desenvolvimento até a entrega de soluções robustas para um sistema legado com mais de 10 anos de evolução. Minhas atividades englobam testes, manutenções, suporte ao cliente, administração do banco de dados e mentoria.
+                            </p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="tag rounded-full px-3 py-1 text-sm">.NET Framework</span>
+                                <span class="tag rounded-full px-3 py-1 text-sm">.NET Core</span>
+                                <span class="tag rounded-full px-3 py-1 text-sm">C#</span>
+                                <span class="tag rounded-full px-3 py-1 text-sm">SQL Server</span>
+                                <span class="tag rounded-full px-3 py-1 text-sm">DevExpress</span>
+                                <span class="tag rounded-full px-3 py-1 text-sm">SOLID</span>
+                                <span class="tag rounded-full px-3 py-1 text-sm">API Integration</span>
+                                <span class="tag rounded-full px-3 py-1 text-sm">AWS</span>
+                                <span class="tag rounded-full px-3 py-1 text-sm">RabbitMQ</span>
+                            </div>
+                        </div>
+                        <!-- SOLUTIONS 2GO Experience -->
+                        <div class="card rounded-lg p-6">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="text-xl font-semibold text-white">Assistente de Recursos Humanos (Aprendiz)</h4>
+                                    <p class="text-blue-400">SOLUTIONS 2GO DO BRASIL</p>
+                                </div>
+                                <span class="text-sm text-gray-400">2020 - 2022</span>
+                            </div>
+                            <p class="mt-4 text-gray-300">
+                                Atuei em diversas tarefas de RH, como apoio em processos seletivos, arquivamento de documentos, suporte administrativo, acolhimento de novos colaboradores e colaboração em auditorias.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-8">
+                <!-- Habilidades Section -->
+                <section id="habilidades">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center">
+                        <i data-lucide="sparkles" class="mr-3 icon"></i>
+                        Principais Habilidades
+                    </h3>
+                    <div class="card rounded-lg p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-center"><i data-lucide="dot" class="mr-2 text-blue-400"></i>Linguagem C#</li>
+                            <li class="flex items-center"><i data-lucide="dot" class="mr-2 text-blue-400"></i>.NET Core & Framework</li>
+                            <li class="flex items-center"><i data-lucide="dot" class="mr-2 text-blue-400"></i>SQL Server</li>
+                            <li class="flex items-center"><i data-lucide="dot" class="mr-2 text-blue-400"></i>Git & Versionamento</li>
+                            <li class="flex items-center"><i data-lucide="dot" class="mr-2 text-blue-400"></i>Princípios SOLID</li>
+                            <li class="flex items-center"><i data-lucide="dot" class="mr-2 text-blue-400"></i>Mensageria (RabbitMQ)</li>
+                            <li class="flex items-center"><i data-lucide="dot" class="mr-2 text-blue-400"></i>Cloud (AWS Básico)</li>
+                            <li class="flex items-center"><i data-lucide="dot" class="mr-2 text-blue-400"></i>Front-end (HTML, Blazor)</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Formação Section -->
+                <section id="formacao">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center">
+                        <i data-lucide="graduation-cap" class="mr-3 icon"></i>
+                        Formação
+                    </h3>
+                    <div class="card rounded-lg p-6">
+                        <h4 class="text-lg font-semibold text-white">Análise e Desenvolvimento de Sistemas</h4>
+                        <p class="text-blue-400">UNIVERSIDADE ESTÁCIO DE SÁ</p>
+                        <p class="text-sm text-gray-400 mt-1">2021 - 2024</p>
+                    </div>
+                </section>
+
+                <!-- Certificações Section -->
+                <section id="certificacoes">
+                     <h3 class="text-2xl font-bold mb-6 flex items-center">
+                        <i data-lucide="award" class="mr-3 icon"></i>
+                        Certificações
+                    </h3>
+                    <div class="card rounded-lg p-6">
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-center"><i data-lucide="star" class="w-4 h-4 mr-2 text-yellow-400"></i>Programação de Sistemas de Informação</li>
+                            <li class="flex items-center"><i data-lucide="star" class="w-4 h-4 mr-2 text-yellow-400"></i>Programação de Algoritmos Escaláveis</li>
+                            <li class="flex items-center"><i data-lucide="star" class="w-4 h-4 mr-2 text-yellow-400"></i>Programação para Internet</li>
+                            <li class="flex items-center"><i data-lucide="star" class="w-4 h-4 mr-2 text-yellow-400"></i>Programação para Dispositivos Móveis</li>
+                            <li class="flex items-center"><i data-lucide="star" class="w-4 h-4 mr-2 text-yellow-400"></i>Língua Inglesa - Nível Básico (Sesc)</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 py-6 border-t border-gray-800">
+            <p class="text-gray-500">&copy; 2024 Matheus Muniz. Todos os direitos reservados.</p>
+        </footer>
+
     </div>
-  </header>
-  <main>
-    <section id="sobre" class="fade-section">
-      <h2>Sobre Mim</h2>
-      <p>Atuo desde 2021 como Desenvolvedor .NET na empresa Blomaq Locação de Equipamentos e Imóveis LTDA. Trabalho com C#, .NET Framework e Core, DevExpress e SQL Server, realizando integrações com APIs como Zapsign e serviços bancários. Domino SOLID, AWS, RabbitMQ, e possuo conhecimentos em HTML, Bootstrap e Blazor (básico). Gosto de trabalhar em equipe, mentorando colegas e resolvendo problemas técnicos de forma prática.</p>
-    <section id="projetos" class="fade-section">
-      <h2>Projetos em Destaque</h2>
-      <div class="project-list">
-        <div class="project">
-          <h3>Sistema de Gestão Blomaq</h3>
-          <p>Atuei no desenvolvimento e manutenção de um sistema legado com mais de 10 anos de evolução, utilizando .NET e SQL Server. Modernizei interfaces com DevExpress e implementei integrações com APIs bancárias e com a API Zapsign.</p>
-          <p class="tech">C#, .NET, SQL Server, DevExpress</p>
-        </div>
-      </div>
-    </section>
-    <section id="competencias" class="fade-section">
-      <h2>Competências Técnicas</h2>
-      <ul class="skills">
-        <li><i class="devicon-csharp-plain colored"></i><span>C#</span></li>
-        <li><i class="devicon-dotnetcore-plain colored"></i><span>.NET Framework &amp; Core</span></li>
-        <li><span>DevExpress</span></li>
-        <li><i class="devicon-microsoftsqlserver-plain colored"></i><span>SQL Server</span></li>
-        <li><span>Integrações com APIs (Zapsign e bancos)</span></li>
-        <li><span>SOLID</span></li>
-        <li><i class="devicon-amazonwebservices-original colored"></i><span>AWS</span></li>
-        <li><span>RabbitMQ</span></li>
-        <li><i class="devicon-html5-plain colored"></i><span>HTML</span></li>
-        <li><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></li>
-        <li><span>Blazor (básico)</span></li>
-      </ul>
-    </section>
-    <section id="formacao" class="fade-section">
-      <h2>Formação Acadêmica e Certificações</h2>
-      <p>Curso de Análise e Desenvolvimento de Sistemas na Universidade Estácio de Sá (2021–2024).</p>
-      <ul>
-        <li>Programação de Sistemas de Informação</li>
-        <li>Algoritmos Escaláveis</li>
-        <li>Programação para Internet</li>
-        <li>Programação para Dispositivos Móveis</li>
-      </ul>
-      <p>Língua Inglesa Nível Básico (SESC)</p>
-    </section>
-    <section id="contato" class="fade-section">
-      <h2>Contato</h2>
-      <p>Email: <a href="mailto:mmuniz.dev@gmail.com">mmuniz.dev@gmail.com</a></p>
-      <p>Telefone: (92) 99440-0136 / (92) 99201-2708</p>
-      <ul class="social">
-        <li><a href="https://github.com/MMUNIZ33" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
-        <li><a href="https://linkedin.com/in/mattheus-muniz" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; <span id="current-year"></span> Matheus Muniz. Todos os direitos reservados.</p>
-  </footer>
-  <script src="js/main.js"></script>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
 </body>
 </html>
